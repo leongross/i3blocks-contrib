@@ -100,19 +100,21 @@ min_width=CPU 100.00%
 label=LOAD
 interval=10
 
-# Battery indicator
-#
-# The battery instance defaults to 0.
-[battery]
-label=BAT
-#label=⚡
-interval=30
+[calendar]
+command=$SCRIPT_DIR/calendar
+interval=1
+LABEL= 
+DATEFMT=+%H:%M:%S
+# SHORTFMT=+%H:%M:%S
+HEIGHT=180
+WIDTH=220
 
-# Date Time
-#
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
 interval=5
+
+[test]
+command=echo"hello"
 
 # Generic media player support
 #
@@ -126,8 +128,8 @@ interval=5
 # OpenVPN support
 #
 # Support multiple VPN, with colors.
-#[openvpn]
-#interval=20
+[openvpn]
+interval=20
 
 # Temperature
 #
